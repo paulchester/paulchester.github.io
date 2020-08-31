@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Paul Chester - About Me</title>
+</head>
+<body onload = "loadpage()">
+    <div id="wrapper">
+        <div id="title">
+            <h1>Paul Chester</h1>
+            <hr>
+            <nav>
+                <ul>
+                    <li><a class="active" href="index.html">About Me</a></li>
+                    <li><a href="javascript:delaypage('portfolio.html')">Portfolio</a></li>
+                    <li><a href="javascript:delaypage('cv.html')">CV</a></li>
+                    <li><a href="javascript:delaypage('contact.html')">Contact Me</a></li>
+                </ul>
+            </nav>
+            <hr>
+        </div>
+    </div>
+    <div id="content">
+        <script>
+            document.getElementById("content").classList.add('fadein');
+        </script>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam maiores iusto deserunt aspernatur magnam nihil quae vitae, culpa omnis odit laborum maxime optio molestiae accusamus non. Iusto perspiciatis distinctio sapiente?</p>
+    </div>
+</body>
+<script src="js/transition.js"></script>
+</html>

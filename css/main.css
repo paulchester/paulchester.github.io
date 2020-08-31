@@ -1,0 +1,264 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body {
+    background-color: gray;
+}
+
+#wrapper {
+    position: fixed;
+    background-color: gray;
+    width: 100%;
+    left: 0%;
+    top: 0%;
+    transition: top 1s;
+    display: block;
+}
+
+#wrapper.movedown {
+    top: 30%;
+    transition: 2s top;
+}
+
+#content {
+    width: 80%;
+    margin: 125px 10% 0;
+    float: left;
+    opacity: 1;
+    transition: opacity 2s;
+}
+#content.fadein {
+    opacity: 0;
+}
+#content.fadeout {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+#title {
+    color: rgb(59, 59, 59);
+}
+#title.moveup {
+    top: 0%;
+    transition: 2s top;
+}
+#title h1 {
+    text-align: center;
+}
+nav {
+    text-align: center;
+}
+
+nav ul {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    padding-inline-start: 0px;
+    display: inline-block;
+    background-color: rgb(200, 200, 200);
+}
+
+nav ul li {
+    padding: 10px 0px;
+    vertical-align: bottom;
+    display: inline-block;
+}
+
+nav ul li a {
+    color: black;
+    padding: 10px 15px;
+    opacity: 1;
+    transition: all 1s ease-in-out;
+}
+nav ul li a:link {
+    text-decoration: none;
+}
+nav ul li a:hover {
+    background-color: rgb(80, 80, 80);
+    color: white;
+}
+nav ul li a.active:hover {
+    background-color: rgb(80, 80, 80);
+    color: white;
+}
+nav ul li a:active {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+nav ul li a:focus {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+nav ul li a.active:active {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+nav ul li a.active {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+hr {
+    margin: 0;
+    width: 100%;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 2px;
+}
+
+form {
+    background-color: #D3D3D3;
+    border-radius: 5px;
+    padding: 5px 5px;
+    width: 430px;
+    margin: auto;
+}
+form label {
+    display: inline-block;
+    width: 100px;
+    padding: 15px 10px;
+    text-align: right;
+    vertical-align: top;
+    font-weight: bolder;
+}
+form input[type=text], input[type=email], textarea {
+    display: inline-block;
+    width: 300px;
+    text-align: left;
+    padding: 15px 20px;
+    border: 1px solid #808080;
+    border-radius: 5px;
+    background-color: #EDEDED;
+    box-sizing: border-box;
+}
+.contactbtn {
+    margin-left: 125px;
+    width: 300px;
+    padding: 2% 2%;
+    border: 1px solid #808080;
+    border-radius: 5px;
+    background-color: #EDEDED;
+    font-weight: bolder;
+    font-size: large;
+}
+.contactbtn:hover {
+    color: #FFFFFF;
+    background-color: #808080;
+}
+.contactbtn:active {
+    background-color: #999999;
+}
+textarea {
+    resize: vertical;
+}
+.myImgs {
+    display: none;
+}
+.myProject {
+    display: none;
+}
+img {
+    vertical-align: middle;
+}
+.slideshow {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+  color: #ffffff;
+  background-color: rgba(0,0,0,0.8);
+  font-size: 25px;
+  padding: 10px 0px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 5px 2px;
+  background-color: rgb(150,150,150);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.5s ease;
+}
+
+.active, .dot:hover {
+  background-color: #000000;
+}
+
+.expand {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    margin-left: 25%;
+    padding: 18px;
+    width: 50%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    border-radius: 5px;
+    transition: all 1s;
+}
+  
+.expand.active {
+    background-color: #333;
+    border-radius: 5px 5px 0px 0px;
+    width: 100%;
+    margin-left:0%;
+    transition: all 1s;
+}
+
+.expand:hover {
+    background-color: #555;
+}
+  
+.expand:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+  
+.expand.active:after {
+    content: "\2212";
+}
+  
+.section {
+    padding: 0 18px;
+    max-height: 0;
+    width: calc(50% - 36px);
+    margin:auto;
+    overflow: hidden;
+    transition: all 1s;
+    background-color: rgb(200, 200, 200);
+    border-radius: 0px 0px 5px 5px;
+}
