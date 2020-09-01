@@ -1,20 +1,26 @@
-var fields = {};
-document.addEventListener("DOMContentLoaded", function() {
-    fields.first_name = document.getElementById('first_name');
-    fields.last_name = document.getElementById('last_name');
-    fields.email = document.getElementById('email');
-    fields.message = document.getElementById('message');
-})
-
-class User {
-    constructor(first_name, last_name, email, message) {
-        this.first_name = first_name;
-        this.last_name = last_name;
-        this.email = email;
-        this.message = message;
+function validateForm(){
+    var fName = document.forms["contactMe"]["first_name"].value;
+    var lName = document.forms["contactMe"]["last_name"].value;
+    var email = document.forms["contactMe"]["email"].value;
+    var message = document.forms["contactMe"]["message"].value;
+    if (fName == "") {
+        alert("First name must be filled out");
+        return false;
     }
-}
-function sendMessage() {
-    let usr = new User(first_name.value, last_name.value, email.value, message.value);
-    alert(`Thank you ${usr.first_name}, your message has been sucessfuly sent`);
+    if (lName == "") {
+        alert("Last name must be filled out");
+        return false;
+    }
+    if (email == "") {
+        alert("email name must be filled out");
+        return false;
+    }
+    if (email.indexOf("@") < 1 || email.indexOf(".") < email.indexOf("@") ) {
+        alert("Please enter a valid email address");
+        return false;
+    }
+    if (message == "") {
+        alert("Message must be filled out");
+        return false;
+    }
 }

@@ -6,8 +6,10 @@ for (i = 0; i < expand.length; i++) {
     this.classList.toggle("active");
     var section = this.nextElementSibling;
     if (section.style.maxHeight){
+      if (window.innerWidth > 480){
+        section.style.width = "calc(50% - 36px)";
+      }
       section.style.maxHeight = null;
-      section.style.width = "calc(50% - 36px)";
     } else {
       section.style.maxHeight = section.scrollHeight + "px";
       section.style.width = "calc(100% - 36px)";
