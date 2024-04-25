@@ -1,9 +1,6 @@
 *{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-body {
-    background-color: gray;
-}
 .gradient-custom {
     /* fallback for old browsers */
     background: #6a11cb;
