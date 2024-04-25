@@ -71,7 +71,7 @@ nav ul {
     height: 100%;
     padding-inline-start: 0px;
     display: inline-block;
-    background-color: rgb(200, 200, 200);
+    background-color: rgb(0, 0, 0);
 }
 
 nav ul li {
@@ -81,7 +81,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: black;
+    color: white;
     padding: 10px 15px;
     opacity: 1;
     transition: all 1s ease-in-out;
@@ -90,28 +90,28 @@ nav ul li a:link {
     text-decoration: none;
 }
 nav ul li a:hover {
-    background-color: rgb(80, 80, 80);
-    color: white;
+    background-color: rgb(245, 245, 245);
+    color: black;
 }
 nav ul li a.active:hover {
-    background-color: rgb(80, 80, 80);
-    color: white;
+    background-color: rgb(245, 245, 245);
+    color: black;
 }
 nav ul li a:active {
-    background-color: rgb(0, 0, 0);
-    color: white;
+    background-color: rgb(255, 255, 255);
+    color: black;
 }
 nav ul li a:focus {
-    background-color: rgb(0, 0, 0);
-    color: white;
+    background-color: rgb(255, 255, 255);
+    color: black;
 }
 nav ul li a.active:active {
-    background-color: rgb(0, 0, 0);
-    color: white;
+    background-color: rgb(255, 255, 255);
+    color: black;
 }
 nav ul li a.active {
-    background-color: rgb(0, 0, 0);
-    color: white;
+    background-color: rgb(255, 255, 255);
+    color: black;
 }
 hr {
     margin: 0;
